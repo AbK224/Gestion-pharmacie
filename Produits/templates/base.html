@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Products Dashboard UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="asset/bootstrap.min.css">
+<link rel="stylesheet" href= "{% static 'style.css' %}">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+  {% include "left_side.html" %}
+
+  <div class="app-content">
+    {% include "header.html" %}
+    {% include "header-2.html" %}
+    {% comment %} cette partie contient le tableau des produits {% endcomment %}
+    {% block product-table %}
+    
+    {% endblock product-table %}
+  </div>
+ 
+</body>
+
+<!-- partial -->
+  <script  src={% static 'script.js' %}></script>
+  <script src="asset/bootstrap.min.js"></script>
+
+</body>
+</html>
